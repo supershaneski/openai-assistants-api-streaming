@@ -1,0 +1,26 @@
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.panel {
+    margin-bottom: 1rem;
+}
+.button {
+    background-color: rebeccapurple;
+    appearance: none;
+    color: #fff;
+    padding: .5rem 1rem;
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+.button:hover {
+    border-color: #fff;
+}
+.button:active {
+    background-color: orangered;
+}
