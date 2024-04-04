@@ -19,13 +19,14 @@ export default function Sandbox() {
 
     const timRef = React.useRef(null)
     const messageRef = React.useRef(null)
-    const inputRef = React.useRef(null)
+    //const inputRef = React.useRef(null)
 
     const [messageItems, setMessageItems] = React.useState([])
     const [inputText, setInputText] = React.useState('')
     const [isLoading, setLoading] = React.useState(false)
     const [isMounted, setMounted] = React.useState(false)
     const [isWaiting, setWaiting] = React.useState(false)
+    const [isComposing, setComposing] = React.useState(false)
 
     React.useEffect(() => {
 
@@ -223,7 +224,6 @@ export default function Sandbox() {
         }, 100)
     }
 
-    /*
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             if(!isComposing) {
@@ -239,7 +239,6 @@ export default function Sandbox() {
     const handleEndComposition = () => {
         setComposing(false)
     }
-    */
 
     return (
         <div className={classes.container}>
@@ -266,14 +265,14 @@ export default function Sandbox() {
                     fullWidth
                     multiline
                     maxRows={3}
-                    //inputRef={(input) => input && input.focus()}
-                    inputRef={inputRef}
+                    inputRef={(input) => input && input.focus()}
+                    //inputRef={inputRef}
                     value={inputText}
                     placeholder='Write your message'
                     onChange={(e) => setInputText(e.target.value)}
-                    //onKeyDown={handleKeyDown}
-                    //onCompositionStart={handleStartComposition}
-                    //onCompositionEnd={handleEndComposition}
+                    onKeyDown={handleKeyDown}
+                    onCompositionStart={handleStartComposition}
+                    onCompositionEnd={handleEndComposition}
                     autoFocus
                     //focused
                     InputProps={{
