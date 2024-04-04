@@ -3,6 +3,9 @@ openai-assistants-api-streaming
 
 A sample application to demonstrate [OpenAI Assistants API streaming](https://platform.openai.com/docs/assistants/overview?context=with-streaming), built using [Next.js](https://nextjs.org/docs/getting-started/installation).
 
+---
+
+[Next.js](https://nextjs.org/docs/getting-started/installation)を使用して作成された[OpenAI Assistants APIストリーミング](https://platform.openai.com/docs/assistants/overview?context=with-streaming)をデモンストレーションするサンプルアプリケーション。
 
 # Motivation
 
@@ -12,6 +15,13 @@ When streaming was first introduced a few weeks ago, I struggle to find resource
 
 A few notes, however. To simplify things, I will not be using the [Vercel AI SDK](https://sdk.vercel.ai/docs). Instead, I’ll be utilizing the [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams) from the Streams API. Also, I will not be using the `createAndStream` SDK helper functions provided by OpenAI. I will opt for the generic functions for streaming.
 
+---
+
+このプロジェクトは、OpenAI Assistants APIのストリーミング機能をテストするためのサンドボックスとして設計されています。
+
+ストリーミングが数週間前に初めて導入されたとき、特に関数呼び出しについて動作させるためのリソースを見つけるのに苦労しました。これがNode.jsやNext.jsを特に実装しようとしている他の人々の助けになることを願っています。
+
+ただし、いくつかの注意点があります。物事を単純化するために、私は[Vercel AI SDK](https://sdk.vercel.ai/docs)を使用しないでしょう。代わりに、Streams APIから[ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams)を利用します。また、OpenAIが提供する`createAndStream` SDKヘルパー関数を使用しないでしょう。私はストリーミングのための一般的な関数を選択します。
 
 # Application
 
@@ -19,6 +29,10 @@ A few notes, however. To simplify things, I will not be using the [Vercel AI SDK
 ![Screenshot](./docs/screenshot.png)
 
 A simple chatbot interface
+
+![Japanese](./docs/screenshot_jp.png)
+
+You can use it to converse in any language, for example, in ***Japanese***.
 
 
 # Streaming: Client-side
