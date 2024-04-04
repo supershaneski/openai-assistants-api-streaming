@@ -13,6 +13,14 @@ When streaming was first introduced a few weeks ago, I struggle to find resource
 A few notes, however. To simplify things, I will not be using the [Vercel AI SDK](https://sdk.vercel.ai/docs). Instead, I’ll be utilizing the [ReadableStream](https://developer.mozilla.org/en-US/docs/Web/API/Streams_API/Using_readable_streams) from the Streams API. Also, I will not be using the `createAndStream` SDK helper functions provided by OpenAI. I will opt for the generic functions for streaming.
 
 
+# Application
+
+
+![Screenshot](./docs/screenshot.png)
+
+A simple chatbot interface
+
+
 # Streaming: Client-side
 
 This is the basic code required to manage streaming on the client-side.
