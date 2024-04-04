@@ -1,12 +1,11 @@
 import Sandbox from './sandbox'
 
-
 export const metadata = {
   title: 'Demo - OpenAI Assistants API Streaming',
   description: 'A sample app to demonstrate OpenAI Assistants API Streaming',
   icons: {
-      icon: '/next.svg',
-      shortcut: '/vercel.svg',
+    icon: '/next.svg',
+    shortcut: '/vercel.svg',
   }
 }
 

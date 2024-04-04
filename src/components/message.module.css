@@ -1,0 +1,50 @@
+.message {
+    padding: .5rem 1rem;
+    display: flex;
+}
+/*
+.message:last-child {
+    margin-bottom: 1rem;
+}
+*/
+/*
+.message + .message {
+    border-top: 1px dotted #333;
+}
+*/
+.avatar {
+    margin: 0 1rem;
+    padding-top: .5rem;
+}
+.text {
+    position: relative;
+    min-width: 100px;
+    /*max-width: calc(100% - 140px);*/
+    max-width: calc(100% - 80px);
+    background-color: #3392d1;
+    padding: 1rem;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    white-space: pre-wrap;
+    color: #fff;
+}
+.assistant {
+    background-color: #fff;
+    color: #222;
+}
+.order1 {
+    order: 1;
+}
+.order2 {
+    order: 2;
+}
+.right {
+    justify-content: flex-end;
+}
+.content {
+    position: relative;
+}
+.progress {
+    position: relative;
+    height: 1rem;
+}
