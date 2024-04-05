@@ -2,6 +2,7 @@ import * as React from 'react'
 import Avatar from '@mui/material/Avatar'
 import LinearProgress from '@mui/material/LinearProgress'
 import BotIcon from '@mui/icons-material/PsychologyAlt'
+import OpenAiIcon from './openaiicon'
 import classes from './message.module.css'
 
 export default function Message({ message, isWaiting }) {
@@ -16,7 +17,7 @@ export default function Message({ message, isWaiting }) {
                 message.role !== 'user' &&
                 <div className={classAvatar}>
                     <Avatar>
-                        <BotIcon />
+                        <OpenAiIcon color='#fff' />
                     </Avatar>
                 </div>
             }

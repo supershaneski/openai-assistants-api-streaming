@@ -7,6 +7,7 @@ import InputAdornment from '@mui/material/InputAdornment'
 import IconButton from '@mui/material/IconButton'
 import ClearIcon from '@mui/icons-material/Clear'
 import SendIcon from '@mui/icons-material/Send'
+import ResetIcon from '@mui/icons-material/RestartAlt'
 import Message from '@/components/message'
 import classes from './sandbox.module.css'
 import { useAppStore } from '@/store/appstore'
@@ -35,28 +36,7 @@ export default function Sandbox() {
     }, [])
 
     React.useEffect(() => {
-
-        const deleteThread = async (thread_id) => {
-
-            try {
-                const response = await fetch('/api/thread', {
-                    method: 'POST',
-                    headers: {
-                        'Accept': 'application/json',
-                    },
-                    body: JSON.stringify({ thread_id })
-                })
-
-                const result = await response.json()
-
-                console.log(result)
-
-            } catch(e) {
-                console.log(e.message)
-            }
-
-        }
-
+        
         if(isMounted) {
             
             if(threadId) {
@@ -73,6 +53,27 @@ export default function Sandbox() {
         }
 
     }, [isMounted])
+
+    const deleteThread = async (thread_id) => {
+
+        try {
+            const response = await fetch('/api/thread', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({ thread_id })
+            })
+
+            const result = await response.json()
+
+            console.log(result)
+
+        } catch(e) {
+            console.log(e.message)
+        }
+
+    }
 
     const handleSubmit = async (e) => {
 
@@ -240,10 +241,22 @@ export default function Sandbox() {
         setComposing(false)
     }
 
+    const handleReset = () => {
+
+        deleteThread(threadId)
+
+        setThreadId('')
+        setMessageItems([])
+
+    }
+
     return (
         <div className={classes.container}>
             <div className={classes.header}>
                 <span>Demo</span>
+                <IconButton onClick={handleReset}>
+                    <ResetIcon />
+                </IconButton>
             </div>
             <div className={classes.messages} ref={messageRef}>
                 {

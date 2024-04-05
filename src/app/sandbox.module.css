@@ -9,8 +9,10 @@
     height: 50px;
     z-index: 3;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
+    padding: 0 1rem;
 }
 .messages {
     background-color: #f5f5f5;
