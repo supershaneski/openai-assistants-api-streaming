@@ -38,7 +38,7 @@ export default function Sandbox() {
     React.useEffect(() => {
         
         if(isMounted) {
-            
+
             if(threadId) {
 
                 /**
@@ -228,7 +228,7 @@ export default function Sandbox() {
     const handleKeyDown = (e) => {
         if (e.key === 'Enter' && !e.shiftKey) {
             if(!isComposing) {
-              handleSubmit(e)
+                handleSubmit(e)
             }
         }
     }
