@@ -253,7 +253,7 @@ export default function Sandbox() {
     return (
         <div className={classes.container}>
             <div className={classes.header}>
-                <span>Demo</span>
+                <span>Test</span>
                 <IconButton onClick={handleReset}>
                     <ResetIcon />
                 </IconButton>
