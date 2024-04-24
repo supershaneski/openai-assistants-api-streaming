@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/345c4d52-6628-4bf0-8a09-516707802078/deploy-status)](https://app.netlify.com/sites/bijtestsite/deploys)
+
+
 openai-assistants-api-streaming
 ======
 
