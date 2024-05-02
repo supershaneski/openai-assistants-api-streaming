@@ -74,6 +74,29 @@ export default function Sandbox() {
         }
 
     }
+    
+    const updateInstructions = async (text) => {
+        try {
+            const response = await fetch('/api/instructions', {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                },
+                body: JSON.stringify({ message: text })
+            })
+
+            const result = await response.json()
+
+            if(response.ok && result.status === 'success'){
+                console.log('Successfully updated instructions:', result.updatedInstructions);
+            } else {
+                console.log('Failed to update instructions:', result);
+            }
+
+        } catch(e) {
+            console.log(e.message)
+        }
+    }
 
     const handleSubmit = async (e) => {
 
@@ -205,6 +228,10 @@ export default function Sandbox() {
             setThreadId(thread_id)
             
             resetScroll()
+            const triggerPhrase = "Update Instructions";
+            if(text.includes(triggerPhrase)){
+                updateInstructions(text);
+            }
 
         } catch(e) {
             
